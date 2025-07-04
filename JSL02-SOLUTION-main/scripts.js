@@ -37,6 +37,27 @@ for (let i = 0; i < newTaskLimit; i++) {
 
   tasks.push(newTask);
 }
+
+// === LOGGING ===
+
+// All tasks
+console.log("==== All Tasks ====");
+tasks.forEach(task => {
+  console.log(`[${task.status.toUpperCase()}] #${task.id}: ${task.title} — ${task.description}`);
+});
+
+// Filter & log completed tasks
+const completedTasks = tasks.filter(task => task.status === "done");
+
+
+if (completedTasks.length > 0) {
+  console.log("==== Completed Tasks ====");
+  completedTasks.forEach(task => {
+    console.log(`#${task.id}: ${task.title} — ${task.description}`);
+  });
+} else {
+  console.log("No tasks completed, let's get to work!");
+}
 // === DOM RENDERING ===
 function renderTasks() {
   // Clear existing rendered tasks
