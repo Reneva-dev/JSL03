@@ -1,16 +1,3 @@
-// Initial task array with sample tasks
-let tasks = [
-  { id: 1, title: "Launch Epic Career 🚀", description: "Start strong", status: "todo" },
-  { id: 2, title: "Conquer React⚛️", description: "React mastery", status: "todo" },
-  { id: 3, title: "Understand Databases⚙️", description: "DB knowledge", status: "todo" },
-  { id: 4, title: "Crush Frameworks🖼️", description: "Framework confidence", status: "todo" },
-  { id: 5, title: "Master JavaScript 💛", description: "Core JS skills", status: "doing" },
-  { id: 6, title: "Never Give Up 🏆", description: "Keep pushing", status: "doing" },
-  { id: 7, title: "Explore ES6 Features 🚀", description: "Modern JS", status: "done" },
-  { id: 8, title: "Have fun 🥳", description: "Enjoy the journey", status: "done" }
-];
-
-
 // Ask the user for the title and description of task 1
 const task1Title = prompt("Enter task 1 title:");
 const task1Description = prompt("Enter task 1 description:");
