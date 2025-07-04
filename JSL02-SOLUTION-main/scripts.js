@@ -10,6 +10,7 @@ let tasks = [
   { id: 8, title: "Have fun 🥳", description: "Enjoy the journey", status: "done" }
 ];
 
+// === DOM RENDERING ===
 function renderTasks() {
   // Clear existing rendered tasks
   document.querySelectorAll(".tasks-container").forEach(container => {
