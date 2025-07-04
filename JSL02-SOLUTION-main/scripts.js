@@ -10,6 +10,22 @@ let tasks = [
   { id: 8, title: "Have fun 🥳", description: "Enjoy the journey", status: "done" }
 ];
 
+function renderTasks() {
+  // Clear existing rendered tasks
+  document.querySelectorAll(".tasks-container").forEach(container => {
+    container.innerHTML = "";
+  });
+
+  tasks.forEach(task => {
+    const taskCard = document.createElement("div");
+    taskCard.classList.add("task-div");
+    taskCard.textContent = task.title;
+
+    const column = document.querySelector(`[data-status="${task.status}"] .tasks-container`);
+    if (column) {
+      column.appendChild(taskCard);
+    }
+  });
 
 
 // Ask the user for the title and description of task 1
