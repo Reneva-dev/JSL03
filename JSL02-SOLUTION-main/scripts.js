@@ -10,6 +10,33 @@ let tasks = [
   { id: 8, title: "Have fun 🥳", description: "Enjoy the journey", status: "done" }
 ];
 
+// Allow up to 3 new tasks
+let newTaskLimit = 3;
+
+for (let i = 0; i < newTaskLimit; i++) {
+  if (tasks.length >= 11) {
+    alert("There are enough tasks on your board, please check them in the console.");
+    break;
+  }
+
+  const title = prompt(`Enter task ${i + 1} title:`);
+  const description = prompt(`Enter task ${i + 1} description:`);
+
+  let status = prompt("Enter task status (todo, doing, done):").toLowerCase();
+  while (!["todo", "doing", "done"].includes(status)) {
+    alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+    status = prompt("Enter task status (todo, doing, done):").toLowerCase();
+  }
+
+  const newTask = {
+    id: tasks.length + 1,
+    title,
+    description,
+    status
+  };
+
+  tasks.push(newTask);
+}
 // === DOM RENDERING ===
 function renderTasks() {
   // Clear existing rendered tasks
