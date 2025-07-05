@@ -14,10 +14,10 @@ let tasks = [
 let newTaskLimit = 3;
 
 for (let i = 0; i < newTaskLimit; i++) {
-  if (tasks.length >= 11) {
-    alert("There are enough tasks on your board, please check them in the console.");
-    break;
-  }
+  if (tasks.length === 11) {
+  alert("There are enough tasks on your board, please check them in the console.");
+}
+
 
   const title = prompt(`Enter task ${i + 1} title:`);
   const description = prompt(`Enter task ${i + 1} description:`);
